@@ -1,11 +1,13 @@
-Package: glados
-Type: Package
-Title: What the Package Does (Title Case)
+Package: glados.package
+Title: Glados R Package
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Maintainer: Kate Wasmer <kwasmer@umich.edu>
+Description: Glados is an emerging package that contains useful tools in scientific computing. 
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+RoxygenNote: 7.3.2
