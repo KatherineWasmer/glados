@@ -1,8 +1,9 @@
 Package: glados
 Title: Glados R Package
 Version: 0.1.0
+Author: Kate Wasmer
 Maintainer: Kate Wasmer <kwasmer@umich.edu>
-Description: Glados is an emerging package that contains useful tools in scientific computing. 
+Description: Scientific computing package. 
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
