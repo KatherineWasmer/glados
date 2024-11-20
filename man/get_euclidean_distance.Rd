@@ -23,4 +23,8 @@ of the same length.
 ann_arbor <- c(42.27756, -83.74088)
 glacier_bay <- c(58.6999972, -136.1499994)
 get_euclidean_distance(ann_arbor, glacier_bay)
+# RGB channels
+russian_violet <- c(69, 31, 85)
+white <- c(255, 255, 255)
+get_euclidean_distance(russian_violet, white)
 }
