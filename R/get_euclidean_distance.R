@@ -16,11 +16,7 @@ library(Rcpp)
 cppFunction('double get_euclidean_distance(
   NumericVector vec1, NumericVector vec2) {
   if (vec1.size() != vec2.size()) {
-    std::cerr << "Error: vec1 has a size of " << vec1.size() << ", but vec2 "
-    << "has a size of " << vec2.size() << ". Please make sure both of your " <<
-    "vectors are of the same size before attempting to compute the euclidean "
-    << "distance." << std::endl;
-    return -1;
+    Rcpp::stop("Please make sure both of your vectors are of the same size before attempting to compute the euclidean. Your output: {vec1 size: %d, vec2 size: %d}", vec1.size(), vec2.size());
   }
   int n = vec1.size();
   double sum_squares = 0;

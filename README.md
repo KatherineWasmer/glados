@@ -1,4 +1,4 @@
-# Glados - Scientific Computing  
+# Glados for Scientific Computing  
 
 [![R-CMD-check](https://github.com/KatherineWasmer/glados/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/KatherineWasmer/glados/actions/workflows/R-CMD-check.yaml)
 
@@ -10,26 +10,25 @@ Named after the iconic AI character in the Portal video games, the glados packag
 -   Mathematics ♾
 -   Data Analysis 🔎
 
-Since this is an emerging project that I hope to continuously update, all versions will be documented here, with brief descriptions of the new features.
+Since this is an emerging project that I hope to continuously update, all versions will be documented here, with brief descriptions of the new features. 
 
 (November 19, 2024) Version 0.1.0 includes the following functions:
 
-`get_euclidean_distance()`
+`get_euclidean_distance()` - computes the Euclidean distance between two vectors 
 
 ## Installation
 
 You can install the development version of glados from [GitHub](https://github.com/) with:
 
 ``` r
-install.packages("glados")
-pak::pak("KatherineWasmer/glados")
+install.packages("devtools") 
+devtools::install_github("KatherineWasmer/glados")
 ```
 
-This is a basic example which shows you how to solve a common problem:
+Here is a simple example of how to load glados and utilize the functions. 
 
 ``` r
-library(glados)
-a <- c(1, 2) 
-b <- c(3, 4)
-get_euclidean_distance(a, b)
+> library(glados)
+> get_euclidean_distance(c(1,2), c(3,4))
+[1] 2.828427
 ```
