@@ -1,4 +1,4 @@
-# Glados - Do It For Science! 
+# Glados - Scientific Computing  
 
 [![R-CMD-check](https://github.com/KatherineWasmer/glados/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/KatherineWasmer/glados/actions/workflows/R-CMD-check.yaml)
 
