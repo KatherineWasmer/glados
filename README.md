@@ -24,7 +24,7 @@ Since this is an emerging project that I hope to continuously update, all versio
 `get_euclidean_distance()` - computes the Euclidean distance between two vectors.
 
 ``` r
-# geographic example 
+# geographic example - compute shortest distance between Ann Arbor and Glacier Bay, AK
 ann_arbor <- c(42.27756, -83.74088) 
 glacier_bay <- c(58.6999972, -136.1499994)
 get_euclidean_distance(ann_arbor, glacier_bay)
