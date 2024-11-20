@@ -10,6 +10,8 @@ Named after the iconic AI character in the Portal video games, the glados packag
 -   Mathematics ♾
 -   Data Analysis 🔎
 
+For more in-depth information on how to incorporate glados with your research, I have provided a [vignette](doc/glados.html)
+
 Since this is an emerging project that I hope to continuously update, all versions will be documented here, with brief descriptions of the new features. 
 
 (November 19, 2024) Version 0.1.0 includes the following functions:
