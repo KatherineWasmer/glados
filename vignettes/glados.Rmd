@@ -24,6 +24,18 @@ Named after the iconic AI character in the Portal video games, the glados packag
 
 The Euclidean distance measures the shortest possible distance between two points on a plane. Mathematically, it is defined as $d(p, q) = \sqrt{\sum_{i = 1}^{n}(q_{i} - p_{i})^{2}}$, where $p$ and $q$ represent two $n$-dimensional vectors (data points), and $p_{i}, q_{i}$ represent the $i$-th element of the respective vector.
 
+**Applications:**
+
+Suppose we want to compute the shortest distance from Ann Arbor to Glacier Bay, Alaska, disregarding any geographic or human-made barriers. Ann Arbor's [DD coordinates](https://en.wikipedia.org/wiki/Decimal_degrees#:~:text=Decimal%20degrees%20(DD)%20is%20a,as%20OpenStreetMap%2C%20and%20GPS%20devices.) are ([42.27756, -83.74088](https://latitude.to/map/us/united-states/cities/ann-arbor)), while Glacier Bay's are ([58.6999972, -136.1499994](https://latitude.to/articles-by-country/us/united-states/31627/glacier-bay-basin)).
+
+```{r euclidean_geography}
+ann_arbor <- c(42.27756, -83.74088) 
+glacier_bay <- c(58.6999972, -136.1499994)
+get_euclidean_distance(ann_arbor, glacier_bay)
+```
+
+Using our geographical knowledge, this means that Glacier Bay is roughly 55 degrees northwest of Ann Arbor!
+
 **Baseline Comparisons:**
 
 Although the built-in `dist()` function returns the same values, the glados version improves upon its efficiency, both computationally and with regards to UX design.
@@ -44,7 +56,7 @@ dist(rbind(a, b), 'euclidean')
 These two problems are solved with glados. The user is not required to concatenate the matrix, and the results are returned with a straightforward number. Due to this optimized code, `get_euclidean_distance` returns improved benchmarks.
 
 ```{r benchmark}
-install.packages('bench')
+if(!require(bench)) install.packages("bench",repos = "http://cran.us.r-project.org")
 library(bench) 
 bench::mark(get_euclidean_distance(a, b),
             dist(rbind(a, b), 'euclidean')[1][1])
@@ -57,14 +69,8 @@ bench::mark(get_euclidean_distance(c, d),
             dist(rbind(c, d), 'euclidean')[1][1])
 ```
 
-**Applications:**
+Improved statistics in glados include the following:
 
-Suppose we want to compute the shortest distance from Ann Arbor to Glacier Bay, Alaska, disregarding any geographic or human-made barriers. Ann Arbor's [DD coordinates](https://en.wikipedia.org/wiki/Decimal_degrees#:~:text=Decimal%20degrees%20(DD)%20is%20a,as%20OpenStreetMap%2C%20and%20GPS%20devices.) are ([42.27756, -83.74088](https://latitude.to/map/us/united-states/cities/ann-arbor)), while Glacier Bay's are ([58.6999972, -136.1499994](https://latitude.to/articles-by-country/us/united-states/31627/glacier-bay-basin)).
+-   Minimum run time
 
-```{r euclidean_geography}
-ann_arbor <- c(42.27756, -83.74088) 
-glacier_bay <- c(58.6999972, -136.1499994)
-get_euclidean_distance(ann_arbor, glacier_bay)
-```
-
-Using our geographical knowledge, this means that Glacier Bay is roughly 55 degrees northwest of Ann Arbor!
+-   Amount of garbage collections (GC)
