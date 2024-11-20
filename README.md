@@ -15,9 +15,7 @@ For more in-depth information on how to incorporate glados with your research, p
 1.  Click on the [vignettes](https://github.com/KatherineWasmer/glados/tree/main/vignettes) folder in the main repo.
 2.  Download the glados.rmd file.
 3.  Open glados.rmd in RStudio.
-4.  Knit the file and preview in HTML. The output should look like this:
-
-![](images/Screenshot 2024-11-20 at 4.15.27 PM.png){width="500"}
+4.  Knit the file and preview in HTML.
 
 Since this is an emerging project that I hope to continuously update, all versions will be documented here, with brief descriptions of the new features.
 
