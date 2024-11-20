@@ -23,7 +23,7 @@ Since this is an emerging project that I hope to continuously update, all versio
 
 `get_euclidean_distance()` - computes the Euclidean distance between two vectors.
 
-``` R
+``` r
 # geographic example 
 ann_arbor <- c(42.27756, -83.74088) 
 glacier_bay <- c(58.6999972, -136.1499994)
@@ -38,5 +38,3 @@ You can install glados from [GitHub](https://github.com/) with:
 install.packages("devtools") 
 devtools::install_github("KatherineWasmer/glados")
 ```
-
-Here are some simple examples of how to implement glados in different domains (which are elaborated on in the vignette).
