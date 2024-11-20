@@ -36,6 +36,20 @@ get_euclidean_distance(ann_arbor, glacier_bay)
 
 Using our geographical knowledge, this means that Glacier Bay is roughly 55 degrees northwest of Ann Arbor!
 
+Another fun way to implement this function is with [RGB color channels](https://learn.microsoft.com/en-us/windows/win32/wcs/rgb-color-spaces). Suppose you are designing a website and love the color purple. You choose Russian violet for the background, but can't decide between black or white text. Based on the image, you might have an idea of which color would look best against this background, but let's test it with our function.
+
+![](images/Screenshot 2024-11-20 at 2.58.43 PM-01.png){width="500"}
+
+```{r colors}
+russian_violet <- c(69, 31, 85)
+white <- c(255, 255, 255)
+black <- c(0, 0, 0)
+print(get_euclidean_distance(russian_violet, black))
+print(get_euclidean_distance(russian_violet, white))
+```
+
+In color science, contrast is key! Since white has a significantly greater euclidean distance to Russian violet, it would be the better choice for the text color!
+
 **Baseline Comparisons:**
 
 Although the built-in `dist()` function returns the same values, the glados version improves upon its efficiency, both computationally and with regards to UX design.
@@ -60,11 +74,9 @@ bench::mark(get_euclidean_distance(ann_arbor, glacier_bay),
             dist(rbind(ann_arbor, glacier_bay), 'euclidean')[1][1])
 ```
 
-```{r complicated}
-c <- c(0.104717,0.066009,-0.019987,-0.020995,-0.028313,-0.007809,0.012926,-0.007384,-0.043359,-0.018224,0,0.007343,-0.019177,0.005367,0.00665,-0.005701,0.019818,-0.00152,-0.003645,0.024512,0.010731,-0.00507,-0.002958,-0.009399,-0.002515)
-d <- c(-0.626027,0.062963,0.018856,0.01292,-0.001846,0.010877,0.019271,-0.004384,-0.02127,0.002734,0.001786,-0.003597,-0.014717,0,-0.015336,0.0118,-0.002086,0.044721,-0.019986,0.005127,-0.005241,-0.001978,-0.00037,0.003012,-0.002036)
-bench::mark(get_euclidean_distance(c, d),
-            dist(rbind(c, d), 'euclidean')[1][1])
+```{r color}
+bench::mark(get_euclidean_distance(russian_violet, white),
+            dist(rbind(russian_violet, white), 'euclidean')[1][1])
 ```
 
 Improved statistics in glados include the following:
