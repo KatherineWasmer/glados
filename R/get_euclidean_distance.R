@@ -9,19 +9,8 @@
 #' @examples
 #' get_euclidean_distance(c(1, 2, 3), c(4, 5, 6))
 #' @export
-#'
+get_euclidean_distance <- function(vec1, vec2) {
+  matrix <- rbind(vec1, vec2) # convert to matrix for fast operations
+  return(sqrt(sum(diff(matrix)^2))) # get difference across rows
+}
 
-library(Rcpp)
-
-cppFunction('double get_euclidean_distance(
-  NumericVector vec1, NumericVector vec2) {
-  if (vec1.size() != vec2.size()) {
-    Rcpp::stop("Please make sure both of your vectors are of the same size before attempting to compute the euclidean. Your output: {vec1 size: %d, vec2 size: %d}", vec1.size(), vec2.size());
-  }
-  int n = vec1.size();
-  double sum_squares = 0;
-  for(int i = 0; i < n; ++i) {
-    sum_squares += pow((vec1[i] - vec2[i]), 2);
-  }
-  return pow(sum_squares, 0.5);
-}')

@@ -3,6 +3,9 @@
 \name{get_euclidean_distance}
 \alias{get_euclidean_distance}
 \title{Euclidean distance}
+\usage{
+get_euclidean_distance(vec1, vec2)
+}
 \arguments{
 \item{vec1}{The first vector.}
 
