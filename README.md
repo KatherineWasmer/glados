@@ -10,7 +10,7 @@ Named after the iconic AI character in the Portal video games, the glados packag
 -   Mathematics ♾
 -   Data Analysis 🔎
 
-For more in-depth information on how to incorporate glados with your research, please utilize the [vignette](file:///private/var/folders/np/r8bkr3hd3bsdsjvxgq559f0h0000gn/T/RtmpxUBGwk/preview-3f26b3537f8.dir/glados.html). If the hyperlink does not work, complete the following steps:
+For more in-depth information on how to incorporate glados with your research, please utilize the vignette with the following steps:
 
 1.  Click on the [vignettes](https://github.com/KatherineWasmer/glados/tree/main/vignettes) folder in the main repo.
 2.  Download the glados.rmd file.
@@ -21,21 +21,22 @@ Since this is an emerging project that I hope to continuously update, all versio
 
 (November 19, 2024) Version 0.1.0 includes the following functions:
 
-`get_euclidean_distance()` - computes the Euclidean distance between two vectors
+`get_euclidean_distance()` - computes the Euclidean distance between two vectors.
+
+``` R
+# geographic example 
+ann_arbor <- c(42.27756, -83.74088) 
+glacier_bay <- c(58.6999972, -136.1499994)
+get_euclidean_distance(ann_arbor, glacier_bay)
+```
 
 ## Installation
 
-You can install the development version of glados from [GitHub](https://github.com/) with:
+You can install glados from [GitHub](https://github.com/) with:
 
 ``` r
 install.packages("devtools") 
 devtools::install_github("KatherineWasmer/glados")
 ```
 
-Here is a simple example of how to load glados and utilize the functions.
-
-``` r
-> library(glados)
-> get_euclidean_distance(c(1,2), c(3,4))
-[1] 2.828427
-```
+Here are some simple examples of how to implement glados in different domains (which are elaborated on in the vignette).

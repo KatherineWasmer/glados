@@ -7,7 +7,10 @@
 #' @param vec2 The second vector.
 #' @return The euclidean distance between vec1 and vec2.
 #' @examples
-#' get_euclidean_distance(c(1, 2, 3), c(4, 5, 6))
+#' # geographic example
+#' ann_arbor <- c(42.27756, -83.74088)
+#' glacier_bay <- c(58.6999972, -136.1499994)
+#' get_euclidean_distance(ann_arbor, glacier_bay)
 #' @export
 get_euclidean_distance <- function(vec1, vec2) {
   'Combine vectors of dimension d into a 2 x d

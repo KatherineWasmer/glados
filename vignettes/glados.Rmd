@@ -81,6 +81,8 @@ bench::mark(get_euclidean_distance(russian_violet, white),
 
 Improved statistics in glados include the following:
 
--   Minimum run time
+-   Decrease in run time
 
--   Amount of garbage collections (GC)
+-   Decreased amount of garbage collections (GC)
+
+-   Increased number of iterations for better accuracy
