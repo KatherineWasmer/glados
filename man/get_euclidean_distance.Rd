@@ -19,5 +19,8 @@ Calculates the euclidean distance between two numerical vectors
 of the same length.
 }
 \examples{
-get_euclidean_distance(c(1, 2, 3), c(4, 5, 6))
+# geographic example
+ann_arbor <- c(42.27756, -83.74088)
+glacier_bay <- c(58.6999972, -136.1499994)
+get_euclidean_distance(ann_arbor, glacier_bay)
 }
