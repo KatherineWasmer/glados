@@ -22,6 +22,9 @@ get_euclidean_distance <- function(vec1, vec2) {
   i-th element, square the differences and sum them,
   and then compute the square root to get euclidean
   '
+  if (length(vec1) != length(vec2)) {
+    stop("Error: vector lengths are not equal! Please make sure both vectors are of the same size before attempting to compute the Euclidean distance.")
+  }
   return(sqrt(sum(diff(rbind(vec1, vec2))^2)))
 }
 
