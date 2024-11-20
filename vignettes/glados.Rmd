@@ -42,15 +42,13 @@ Although the built-in `dist()` function returns the same values, the glados vers
 
 ```{r dist}
 # original function 
-a <- c(1, 2, 3)
-b <- c(4, 5, 6)
-dist(rbind(a, b), 'euclidean')[1][1]
+dist(rbind(ann_arbor, glacier_bay), 'euclidean')[1][1]
 ```
 
 Notice the extra steps taken to compute the distance? For users with little experience in R, `rbind()` may not be intuitive, and it takes time to figure out. Furthermore, we can only isolate the numerical result by indexing [1][1]; otherwise, we would simply return a 1 x 1 matrix with the row and column names included.
 
 ```{r matrix}
-dist(rbind(a, b), 'euclidean')
+dist(rbind(ann_arbor, glacier_bay), 'euclidean')
 ```
 
 These two problems are solved with glados. The user is not required to concatenate the matrix, and the results are returned with a straightforward number. Due to this optimized code, `get_euclidean_distance` returns improved benchmarks.
@@ -58,8 +56,8 @@ These two problems are solved with glados. The user is not required to concatena
 ```{r benchmark}
 if(!require(bench)) install.packages("bench",repos = "http://cran.us.r-project.org")
 library(bench) 
-bench::mark(get_euclidean_distance(a, b),
-            dist(rbind(a, b), 'euclidean')[1][1])
+bench::mark(get_euclidean_distance(ann_arbor, glacier_bay),
+            dist(rbind(ann_arbor, glacier_bay), 'euclidean')[1][1])
 ```
 
 ```{r complicated}
