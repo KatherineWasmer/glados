@@ -44,6 +44,7 @@ dist(rbind(a, b), 'euclidean')
 These two problems are solved with glados. The user is not required to concatenate the matrix, and the results are returned with a straightforward number. Due to this optimized code, `get_euclidean_distance` returns improved benchmarks.
 
 ```{r benchmark}
+install.packages('bench')
 library(bench) 
 bench::mark(get_euclidean_distance(a, b),
             dist(rbind(a, b), 'euclidean')[1][1])
