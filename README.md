@@ -21,6 +21,8 @@ install.packages("devtools")
 devtools::install_github("KatherineWasmer/glados", build_vignettes = T) # allows you to browse vignettes
 ```
 
+## Functionality
+
 Since this is an emerging project that I hope to continuously update, all versions will be documented here, with brief descriptions of the new features.
 
 (November 19, 2024) Version 0.1.0 includes the following functions:
