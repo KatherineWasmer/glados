@@ -10,12 +10,16 @@ Named after the iconic AI character in the Portal video games, the glados packag
 -   Mathematics ♾
 -   Data Analysis 🔎
 
-For more in-depth information on how to incorporate glados with your research, please utilize the vignette with the following steps:
+For more in-depth information on how to incorporate glados with your research, please read the vignette `browseVignettes("glados)"` after installing the package to your machine. 
 
-1.  Click on the [vignettes](https://github.com/KatherineWasmer/glados/tree/main/vignettes) folder in the main repo.
-2.  Download the glados.rmd file.
-3.  Open glados.rmd in RStudio.
-4.  Knit the file and preview in HTML.
+## Installation
+
+You can install glados from [GitHub](https://github.com/) with:
+
+``` r
+install.packages("devtools") 
+devtools::install_github("KatherineWasmer/glados", build_vignettes = T) # allows you to browse vignettes
+```
 
 Since this is an emerging project that I hope to continuously update, all versions will be documented here, with brief descriptions of the new features.
 
@@ -28,13 +32,4 @@ Since this is an emerging project that I hope to continuously update, all versio
 ann_arbor <- c(42.27756, -83.74088) 
 glacier_bay <- c(58.6999972, -136.1499994)
 get_euclidean_distance(ann_arbor, glacier_bay)
-```
-
-## Installation
-
-You can install glados from [GitHub](https://github.com/) with:
-
-``` r
-install.packages("devtools") 
-devtools::install_github("KatherineWasmer/glados")
 ```
