@@ -1,6 +1,6 @@
 Package: glados
 Title: Glados R Package
-Version: 0.1.0
+Version: 0.1.1
 Author: Kate Wasmer
 Maintainer: Kate Wasmer <kwasmer@umich.edu>
 Description: Scientific computing package. 
@@ -11,6 +11,8 @@ Suggests:
     knitr,
     rmarkdown,
     testthat (>= 3.0.0)
+Imports:
+    glue
 VignetteBuilder: knitr
-RoxygenNote: 7.3.2
+RoxygenNote: 7.3.3
 Config/testthat/edition: 3
