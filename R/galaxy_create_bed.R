@@ -3,7 +3,7 @@
 #' @description Uses the PLINK 1.9 library to create BED, BIM, and FAM
 #' files from a VCF file.
 #'
-#' @param filename The VCF file you want to create a PLINK .bed/.bim/.fam file for
+#' @param filename The .vcf.gz file you want to create a PLINK .bed/.bim/.fam file for.
 #' @param output_name Outputs the files output_name.bed, outputname.bim,
 #' and outputname.fam
 #'

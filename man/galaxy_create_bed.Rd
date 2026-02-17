@@ -7,7 +7,7 @@
 galaxy_create_bed(filename, output_name)
 }
 \arguments{
-\item{filename}{The VCF file you want to create a PLINK .bed/.bim/.fam file for}
+\item{filename}{The .vcf.gz file you want to create a PLINK .bed/.bim/.fam file for.}
 
 \item{output_name}{Outputs the files output_name.bed, outputname.bim,
 and outputname.fam}

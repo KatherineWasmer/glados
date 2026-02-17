@@ -1,6 +1,6 @@
 Package: glados
 Title: Glados R Package
-Version: 0.1.1
+Version: 0.2.0
 Author: Kate Wasmer
 Maintainer: Kate Wasmer <kwasmer@umich.edu>
 Description: Scientific computing package. 
