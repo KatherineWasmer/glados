@@ -23,7 +23,15 @@ devtools::install_github("KatherineWasmer/glados", build_vignettes = T) # allows
 
 ## Functionality
 
-Since this is an emerging project that I hope to continuously update, all versions will be documented here, with brief descriptions of the new features.
+(March 10, 2016) Version 0.2.0 includes the following functions to eliminate the need to type out command lines for bioinformatics tools (PLINK, bcftools, etc.) 
+
+`install_plink()` - Installs PLINK 1.9 through an RStudio instance without the need to use the terminal. 
+
+`rename_file()`  - Renames a file within a directory. This is especially useful when using a Galaxy RStudio instance. 
+
+`create_bed()` - Creates a PLINK binary file set (.bed/.bim/.fam) from a vcf.gz file 
+
+`create_pca()` - Creates a PCA from a PLINK binary file set. 
 
 (November 19, 2024) Version 0.1.0 includes the following functions:
 
