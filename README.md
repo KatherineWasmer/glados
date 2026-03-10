@@ -23,7 +23,7 @@ devtools::install_github("KatherineWasmer/glados", build_vignettes = T) # allows
 
 ## Functionality
 
-(March 10, 2016) Version 0.2.0 includes the following functions to eliminate the need to type out command lines for bioinformatics tools (PLINK, bcftools, etc.) 
+####(March 10, 2016) Version 0.2.0 includes the following functions to eliminate the need to type out command lines for bioinformatics tools (PLINK, bcftools, etc.) 
 
 `install_plink()` - Installs PLINK 1.9 through an RStudio instance without the need to use the terminal. 
 
@@ -33,7 +33,7 @@ devtools::install_github("KatherineWasmer/glados", build_vignettes = T) # allows
 
 `create_pca()` - Creates a PCA from a PLINK binary file set. 
 
-(November 19, 2024) Version 0.1.0 includes the following functions:
+####(November 19, 2024) Version 0.1.0 includes the following functions:
 
 `get_euclidean_distance()` - computes the Euclidean distance between two vectors.
 
