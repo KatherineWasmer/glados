@@ -23,9 +23,9 @@ devtools::install_github("KatherineWasmer/glados", build_vignettes = T) # allows
 
 ## Functionality
 
-#### 3/10/2026 --  Version 0.2.0 includes the following functions to eliminate the need to type out command lines for bioinformatics tools (PLINK, bcftools, etc.) 
+#### 3/10/2026 --  Version 0.2.0 includes the following functions to eliminate the need to manually interact with the terminal. These functions are especially useful for cloud-based RStudio servers (Galaxy, Great Lakes HPC, etc.). 
 
-`install_plink()` - Installs PLINK 1.9 through an RStudio instance without the need to manually interact with the terminal. 
+`install_plink()` - Installs PLINK 1.9 through an RStudio instance. 
 
 `rename_file()`  - Renames a file within a directory. This is especially useful when using a Galaxy RStudio instance. 
 
