@@ -23,7 +23,7 @@ devtools::install_github("KatherineWasmer/glados", build_vignettes = T) # allows
 
 ## Functionality
 
-#### 3/10/2026 --  Version 0.2.0 includes the following functions to eliminate the need to manually interact with the terminal. These functions are especially useful for cloud-based RStudio servers (Galaxy, Great Lakes HPC, etc.). 
+#### 3/10/2026 --  Version 0.2.0 includes the following bioinformatics functions to eliminate the need to manually interact with the terminal. These functions are especially useful for cloud-based RStudio servers (Galaxy, Great Lakes HPC, etc.). 
 
 `install_plink()` - Installs PLINK 1.9 through an RStudio instance. 
 
