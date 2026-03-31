@@ -4,16 +4,13 @@
 \alias{create_bed}
 \title{Create BED, BIM and FAM for VCF}
 \usage{
-create_bed(filename, output_name, galaxy = FALSE, folder_name)
+create_bed(filename, output_name, folder_name)
 }
 \arguments{
 \item{filename}{The .vcf.gz file you want to create a PLINK .bed/.bim/.fam file for.}
 
 \item{output_name}{Outputs the files output_name.bed, outputname.bim,
 and outputname.fam}
-
-\item{galaxy}{Whether or not the script is being run in a Galaxy server
-RStudio instance (returns TRUE or FALSE). Default value is FALSE}
 
 \item{folder_name}{The name of the folder where your vcf file is located.}
 }
@@ -26,7 +23,7 @@ files from a VCF file without the hassle of typing in the command lines.
 Includes the option to run in a remote Galaxy server with an RStudio instance.
 }
 \examples{
-create_bed("genome.vcf.gz", "genome_output", galaxy=FALSE, folder_name="my_folder")
+create_bed("genome.vcf.gz", "genome_output", folder_name="galaxy_inputs")
 
 
 }
