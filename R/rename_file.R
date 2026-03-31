@@ -15,5 +15,5 @@
 #' @return A new file within the galaxy_inputs directory.
 #' @export
 rename_file <- function(oldName, newName, folderName){
-  system(glue::glue("mv ~/{folderName}/{oldName} ~/{folder_Name}/{newName}"))
+  system(glue::glue("mv ~/{folderName}/{oldName} ~/{folderName}/{newName}"))
 }
