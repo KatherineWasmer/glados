@@ -18,5 +18,5 @@
 #' @export
 #'
 create_bed <- function(filename, output_name, folder_name){
-  system(glue::glue("~/bin/plink --vcf {folder_name}/{filename} --make-bed --out {output_name}"))
+  system(glue::glue("~/bin/plink --vcf {folder_name}/{filename} --make-bed --keep-allele-order --out {output_name}"))
 }
